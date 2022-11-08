@@ -7,16 +7,14 @@ spec:
     project: default
     source:
         repoURL: https://github.com/sousa-andre/spring-boot-rest-services-with-unit-and-integration-test-config
-        targtetRevision: HEAD
+        targetRevision: HEAD
         path: dev
     destination:
         server: https://kubernetes.default.svc
         namespace: spring
-
     syncPolicy:
         syncOptions:
             - CreateNamespace=true
-
         automated:
-            selfHealing: true
+            selfHeal: true
             prune: true
