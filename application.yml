@@ -4,8 +4,9 @@ metadata:
     name: spring-api
     namespace: default
     annotations:
-        argocd-image-updater.argoproj.io/image-list: sousandre/spring-api:latest
+        argocd-image-updater.argoproj.io/image-list: sousandre/spring-api
         argocd-image-updater.argoproj.io/git-branch: master
+    namespace: argocd
 spec:
     project: default
     source:
