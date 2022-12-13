@@ -6,7 +6,7 @@ metadata:
     finalizers:
         - resources-finalizer.argocd.argoproj.io
     annotations:
-        argocd-image-updater.argoproj.io/image-list: sousandre/spring-api
+        argocd-image-updater.argoproj.io/image-list: sousandre/spring-api:~1
         argocd-image-updater.argoproj.io/git-branch: master
         argocd-image-updater.argoproj.io/image-list: git:secret:argocd/git-creds
 
