@@ -1,0 +1,3 @@
+apiVersion: v2
+name: spring-api
+version: 8.2.1
