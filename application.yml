@@ -14,7 +14,7 @@ spec:
     source:
         repoURL: https://github.com/sousa-andre/spring-boot-rest-services-with-unit-and-integration-test-config
         targetRevision: HEAD
-        path: chart2
+        path: prod
     destination:
         server: https://kubernetes.default.svc
         namespace: spring
