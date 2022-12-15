@@ -6,14 +6,17 @@ metadata:
 spec:
     selector:
         matchLabels:
-            name: node-exporter
+            app: node-exporter-spring
     template:
         metadata:
             labels:
-                name: node-exporter
+                app: node-exporter-spring
         spec:
+            nodeSelector:
+                app: spring
             containers:
                 - name: node-exporter
                   image: quay.io/prometheus/node-exporter:latest
+                  imagePullPolicy: Always
                   ports:
                       - containerPort: 9100

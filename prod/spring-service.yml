@@ -5,9 +5,8 @@ metadata:
 spec:
     type: LoadBalancer
     selector:
-        matchLabels:
-            app: spring
+      app: spring
     ports:
         - port: 8080
           targetPort: 8080
-          nodePort: 8090
+          nodePort: 30000
