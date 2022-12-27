@@ -14,6 +14,6 @@ spec:
         spec:
             containers:
                 - name: spring-api
-                  image: sousandre/spring-api:latest
+                  image: sousandre/spring-api
                   ports:
                       - containerPort: 8080 

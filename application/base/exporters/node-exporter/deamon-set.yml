@@ -3,6 +3,8 @@ kind: DaemonSet
 metadata:
     name: node-exporter
     namespace: spring
+    labels:
+        app: node-exporter-spring
 spec:
     selector:
         matchLabels:
@@ -12,8 +14,6 @@ spec:
             labels:
                 app: node-exporter-spring
         spec:
-            nodeSelector:
-                app: spring
             containers:
                 - name: node-exporter
                   image: quay.io/prometheus/node-exporter:latest

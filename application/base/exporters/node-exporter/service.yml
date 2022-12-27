@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-exporter-service
+  namespace: spring
+  labels:
+    app: node-exporter-service
+spec:
+  selector:
+    app: node-exporter-spring
+  ports:
+    - port: 9100
+      name: http-metrics
