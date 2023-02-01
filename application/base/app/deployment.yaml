@@ -15,7 +15,7 @@ spec:
         spec:
             containers:
                 - name: spring-api
-                  image: registry.hub.docker.com/sousandre/spring-api
+                  image: docker.io/sousandre/spring-api
                   env:
                       - name: OTEL_SERVICE_NAME
                         value: spring-api
