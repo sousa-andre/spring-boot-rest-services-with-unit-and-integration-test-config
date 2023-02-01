@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - ../../base
 images:
-  - name: sousandre/spring-api
+  - name: registry.hub.docker.com/sousandre/spring-api
     newTag: 2.0.2
 replicas:
   - name: spring
