@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: cpu-alert-manager
+  namespace: prometheus
+spec:
+  alerting:
+    alertmanagers:
+      - name: cpu-alert-manager
+        namespace: prometheus
+        port: 9093
+  serviceMonitorSelector:
+    matchLabels:
+      app: node-exporter-service-monitor

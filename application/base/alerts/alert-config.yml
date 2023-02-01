@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: AlertmanagerConfig
+metadata:
+  name: cpu-alert-config
+  namespace: prometheus
+  labels:
+    alert-manager-config: cpu-alert-config
+spec:
+  receivers:
+    - name: 'webhook'
+      webhookConfigs:
+        - url: 'http://example.com/'
+

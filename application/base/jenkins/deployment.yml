@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+  labels:
+    name: jenkins
+spec:
+  selector:
+    matchLabels:
+      name: jenkins
+  template:
+    spec:
+
+      containers:
+        - name: jenkins
+          image:
