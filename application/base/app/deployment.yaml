@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: spring
+    namespace: spring
 spec:
     selector:
         matchLabels:
@@ -15,5 +16,14 @@ spec:
             containers:
                 - name: spring-api
                   image: sousandre/spring-api
+                  env:
+                      - name: OTEL_SERVICE_NAME
+                        value: spring-api
+                      - name: OTEL_EXPORTER_OTLP_ENDPOINT
+                        value: http://jaeger-jaeger-operator-jaeger-collector.jaeger.svc.cluster.local:4317
+                      - name: OTEL_METRICS_EXPORTER
+                        value: none
+                      - name: LOKI_ENDPOINT
+                        value: http://loki-loki-distributed-distributor.grafana.svc.cluster.local:3100
                   ports:
-                      - containerPort: 8080 
+                      - containerPort: 8080
