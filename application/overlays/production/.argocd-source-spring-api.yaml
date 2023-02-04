@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - docker.io/sousandre/spring-api:20
