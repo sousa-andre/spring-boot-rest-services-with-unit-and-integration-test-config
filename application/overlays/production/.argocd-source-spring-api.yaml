@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - docker.io/sousandre/spring-api:20
+  - docker.io/sousandre/spring-api:2.0.2
