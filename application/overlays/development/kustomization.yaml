@@ -4,7 +4,7 @@ resources:
   - ../../base
 images:
   - name: docker.io/sousandre/spring-api
-    newTag: 2.0.2
+    newTag: 7a368ea
 replicas:
   - name: spring
     count: 2
