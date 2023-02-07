@@ -8,3 +8,4 @@ replicas:
 images:
 - name: sousandre/spring-api
   newName: sousandre/spring-api
+  newTag: latest
