@@ -5,11 +5,9 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd-image-updater.argoproj.io/image-list: docker.io/sousandre/spring-api
-    # argocd-image-updater.argoproj.io/git-branch: master
+    argocd-image-updater.argoproj.io/image-list: image=docker.io/sousandre/spring-api
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
     argocd-image-updater.argoproj.io/image.update-strategy: latest
-    #argocd-image-updater.argoproj.io/write-back-target: kustomization
   namespace: argocd
 spec:
   project: default
@@ -21,5 +19,8 @@ spec:
     server: https://kubernetes.default.svc
     namespace: spring
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
