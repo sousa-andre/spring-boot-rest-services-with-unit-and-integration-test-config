@@ -1,7 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-    - ../../base
+- ../../base
 replicas:
-    -   name: spring
-        count: 4
+- count: 4
+  name: spring
+images:
+- name: sousandre/spring-api
+  newName: sousandre/spring-api
