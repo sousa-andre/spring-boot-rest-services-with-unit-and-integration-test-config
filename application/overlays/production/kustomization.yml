@@ -6,7 +6,7 @@ replicas:
 - count: 4
   name: spring
 images:
-- newTag: "40"
+- newTag: "45"
 - name: sousandre/spring-api
   newName: sousandre/spring-api
   newTag: latest
