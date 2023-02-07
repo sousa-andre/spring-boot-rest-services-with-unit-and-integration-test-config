@@ -10,6 +10,3 @@ resources:
   - alerts/alert.yml
   - alerts/alert-config.yml
   - alerts/prometheus-cpu-alert-config.yml
-  - jenkins/deployment.yml
-  - jenkins/namespace.yml
-  - jenkins/service.yml
