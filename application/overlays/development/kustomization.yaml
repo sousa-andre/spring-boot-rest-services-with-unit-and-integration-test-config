@@ -4,7 +4,6 @@ resources:
   - ../../base
 images:
   - name: sousandre/spring-api
-    newTag: 7a368ea
 replicas:
   - name: spring
     count: 2

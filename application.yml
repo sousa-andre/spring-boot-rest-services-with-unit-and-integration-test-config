@@ -7,14 +7,15 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: image=sousandre/spring-api
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
-    argocd-image-updater.argoproj.io/image.update-strategy: latest
+    argocd-image-updater.argoproj.io/image.update-strategy: digest
+    argocd-image-updater.argoproj.io/image.allowed-tags: latest
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/sousa-andre/spring-boot-rest-services-with-unit-and-integration-test-config
     targetRevision: HEAD
-    path: application/overlays/production
+    path: application/overlays/development
   destination:
     server: https://kubernetes.default.svc
     namespace: spring
