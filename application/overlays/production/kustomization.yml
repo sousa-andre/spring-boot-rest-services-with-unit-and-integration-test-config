@@ -10,4 +10,4 @@ images:
   newTag: 2b72048
 - name: sousandre/spring-api
   newName: sousandre/spring-api
-  newTag: latest
+  newTag: 64f124b
