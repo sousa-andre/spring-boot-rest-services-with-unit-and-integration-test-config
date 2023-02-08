@@ -6,8 +6,6 @@ replicas:
 - count: 4
   name: spring
 images:
-- newName: :sousandre/spring-api
-  newTag: 2b72048
 - name: sousandre/spring-api
   newName: sousandre/spring-api
   newTag: 64f124b
